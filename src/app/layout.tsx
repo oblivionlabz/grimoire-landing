@@ -14,7 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const SITE_URL = "https://grimoire.example.com";
+const SITE_URL = "https://operators-grimoire.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
       "Fourteen curated Claude Code skills for senior developers. One-time $99. No subscription. No telemetry.",
     images: [
       {
-        url: "/demo-poster.png",
-        width: 1280,
-        height: 720,
-        alt: "Operator's Grimoire — terminal demo poster",
+        url: "/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "The Operator's Grimoire",
       },
     ],
   },
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: "The Claude Code Operator's Grimoire",
     description:
       "Fourteen curated Claude Code skills for senior developers. One-time $99.",
-    images: ["/demo-poster.png"],
+    images: ["/og-card.png"],
   },
   robots: {
     index: true,
