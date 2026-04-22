@@ -325,24 +325,64 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 5 — Demo */}
+      {/* 5 — Install */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 py-24">
-          <SectionLabel>05 / demo</SectionLabel>
+          <SectionLabel>05 / install</SectionLabel>
           <h2 className="max-w-3xl font-display text-3xl font-semibold tracking-tight sm:text-4xl">
             One install. Fourteen new commands.
           </h2>
 
-          <div className="chamfer mt-12 overflow-hidden border border-border bg-surface">
-            <video
-              className="block aspect-video w-full bg-background"
-              controls
-              preload="metadata"
-              poster="/demo-poster.png"
-            >
-              <source src="/demo.mp4" type="video/mp4" />
-            </video>
+          <div className="chamfer mt-12 overflow-hidden border border-border bg-surface p-8 sm:p-10">
+            <pre className="overflow-x-auto font-mono text-[13px] leading-relaxed text-foreground/90">
+{`# 1. Download the bundle from Gumroad
+$ unzip grimoire-v1.1.0.zip -d grimoire && cd grimoire
+
+# 2. Run the installer
+$ ./install.sh
+  The Operator's Grimoire — installer
+  Installing skills
+    installed sdd
+    installed spec-kit-init
+    installed constitution
+    installed agents-md
+    installed scaffold
+    installed project-init
+    installed saas-scaffold
+    installed backlog
+    installed adr
+    installed orchestrate
+    installed evals
+    installed claude-agent
+    installed skill-creator
+    installed obsidian-vault
+  Installing hooks
+    installed grimoire-session-start.sh
+    installed grimoire-format-on-edit.sh
+    installed grimoire-task-summary.sh
+  Wiring settings.json
+    installed settings.json
+  Wiring CLAUDE.md
+    installed CLAUDE.md
+  14 skills installed, 3 hooks armed, statusline wired.
+
+# 3. Restart Claude Code
+$ claude
+
+  /sdd            /spec-kit-init  /constitution   /agents-md
+  /scaffold       /project-init   /saas-scaffold  /backlog
+  /adr            /orchestrate    /evals          /claude-agent
+  /skill-creator  /obsidian-vault
+
+# Your first command
+$ /sdd "ship a minimal FastAPI endpoint"`}
+            </pre>
           </div>
+          <p className="mt-8 max-w-2xl text-sm text-muted">
+            Safe on an existing <code className="font-mono text-foreground">~/.claude/</code> —
+            the installer makes a timestamped backup of anything it would overwrite and supports
+            <code className="font-mono text-foreground"> --force</code> / <code className="font-mono text-foreground">--skip</code> flags for non-interactive runs.
+          </p>
         </div>
       </section>
 
