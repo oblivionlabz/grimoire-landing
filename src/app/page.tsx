@@ -2,9 +2,9 @@ import Link from "next/link";
 import { LeadMagnetForm } from "./_components/LeadMagnetForm";
 import { FoundingBadgeLive } from "./_components/FoundingBadgeLive";
 
-const GUMROAD_URL =
-  process.env.NEXT_PUBLIC_GUMROAD_URL ??
-  "https://vermidox.gumroad.com/l/operators-grimoire";
+const CHECKOUT_URL =
+  process.env.NEXT_PUBLIC_CHECKOUT_URL ??
+  "https://buy.stripe.com/cNi6oIe6C2VJ9NUdOqcfK0N";
 const FOUNDING_CAP = 100;
 
 // Server-side: render with the static fallback, then let the client component
@@ -122,7 +122,7 @@ function PrimaryCta({ id }: { id?: string }) {
   return (
     <Link
       id={id}
-      href={GUMROAD_URL}
+      href={CHECKOUT_URL}
       className="chamfer inline-flex items-center gap-3 bg-accent px-7 py-4 font-mono text-sm font-semibold uppercase tracking-[0.18em] text-accent-fg transition-[transform,filter] hover:brightness-110 active:translate-y-px"
       rel="noopener"
     >
