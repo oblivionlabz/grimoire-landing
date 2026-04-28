@@ -31,7 +31,7 @@ export function LeadMagnetForm() {
       }
       setStatus("ok");
       setMessage(
-        "Check your inbox for the preview PDF. Whitelist ashborn@oblivionlabz.net.",
+        "Check your inbox for the preview PDF. Whitelist dan.vermillion@oblivionlabz.net.",
       );
       setEmail("");
       setFirstName("");

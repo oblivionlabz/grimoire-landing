@@ -500,10 +500,10 @@ $ /sdd "ship a minimal FastAPI endpoint"`}
           <span>
             Grimoire v1.1.0 &middot; Built by an operator &middot; Contact:{" "}
             <a
-              href="mailto:ashborn@oblivionlabz.net"
+              href="mailto:dan.vermillion@oblivionlabz.net"
               className="text-foreground hover:text-accent"
             >
-              ashborn@oblivionlabz.net
+              dan.vermillion@oblivionlabz.net
             </a>
           </span>
           <span aria-hidden className="block h-2 w-2 bg-accent pulse-dot" />

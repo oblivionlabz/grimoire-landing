@@ -46,7 +46,7 @@ function allowedOrigin(origin: string | null): boolean {
 async function sendResendWelcome(email: string, firstName: string) {
   const apiKey = env("RESEND_API_KEY");
   if (!apiKey) return { ok: false, reason: "no-resend-key" };
-  const from = env("GRIMOIRE_FROM_EMAIL", "Ashborn <ashborn@oblivionlabz.net>");
+  const from = env("GRIMOIRE_FROM_EMAIL", "Dan Vermillion <dan.vermillion@oblivionlabz.net>");
   const downloadUrl = env(
     "GRIMOIRE_PREVIEW_URL",
     "https://grimoire.oblivionlabz.net/grimoire-preview.pdf",
