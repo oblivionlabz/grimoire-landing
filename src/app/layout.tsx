@@ -14,10 +14,11 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const SITE_URL = "https://operators-grimoire.vercel.app";
+const SITE_URL = "https://grimoire.oblivionlabz.net";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  alternates: { canonical: "/" },
   title: "The Claude Code Operator's Grimoire — 14 senior-dev skills, $99",
   description:
     "Fourteen curated Claude Code skills that turn the CLI into a disciplined senior operator: spec-driven dev, ADRs, scaffolds, evals, orchestration. One-time purchase. No subscription. No telemetry.",

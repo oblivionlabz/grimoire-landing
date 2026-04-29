@@ -141,10 +141,33 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
+const PRODUCT_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "The Operator's Grimoire",
+  description:
+    "Fourteen production-grade Claude Code skills that turn the CLI into a disciplined senior operator: spec-driven dev, ADRs, scaffolds, evals, orchestration. One-time purchase, lifetime access.",
+  image: "https://grimoire.oblivionlabz.net/og-card.png",
+  brand: { "@type": "Brand", name: "OblivionLabz" },
+  url: "https://grimoire.oblivionlabz.net/",
+  offers: {
+    "@type": "Offer",
+    url: CHECKOUT_URL,
+    price: "99.00",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    validFrom: "2026-04-21",
+  },
+};
+
 export default function Page() {
   const founding = FOUNDING_FALLBACK;
   return (
     <main className="relative isolate">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PRODUCT_JSONLD) }}
+      />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-grid [mask-image:linear-gradient(to_bottom,black,transparent_85%)]"
@@ -498,7 +521,15 @@ $ /sdd "ship a minimal FastAPI endpoint"`}
       <footer>
         <div className="mx-auto flex max-w-6xl flex-col items-start gap-2 px-6 py-10 font-mono text-xs uppercase tracking-[0.2em] text-muted sm:flex-row sm:items-center sm:justify-between">
           <span>
-            Grimoire v1.1.0 &middot; Built by an operator &middot; Contact:{" "}
+            Grimoire v1.1.0 &middot; Built by{" "}
+            <a
+              href="https://oblivionlabz.net"
+              className="text-foreground hover:text-accent"
+              rel="author"
+            >
+              OblivionLabz
+            </a>{" "}
+            &middot; Contact:{" "}
             <a
               href="mailto:dan.vermillion@oblivionlabz.net"
               className="text-foreground hover:text-accent"
